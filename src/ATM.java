@@ -21,10 +21,11 @@ public class ATM {
                 String choice = scanner.nextLine();
                 if (choice.equals("y")) {
                     accounts.put(name, 100.0);
-                }else {
+                }else if (choice.equals("n")) {
                     System.out.println("OK, have a nice day.");
                     System.exit(0);
-                }
+                }else
+                    throw new Exception("Invalid option.");
 
             }
 
@@ -47,6 +48,7 @@ public class ATM {
 
                 if (amountNum > balance) {
                     throw new Exception("Insufficient funds");
+
                 } else {
                     balance = balance - amountNum;
                     accounts.put(name, balance);
@@ -60,4 +62,6 @@ public class ATM {
             }
         }
     }
+
+
 }
