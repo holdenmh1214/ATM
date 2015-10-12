@@ -5,7 +5,7 @@
 import java.util.*;
 
 public class ATM {
-    public static void run() throws Exception {
+    public static void main(String[] args) throws Exception {
         HashMap<String, Double> accounts = new HashMap();
         while (true){
             System.out.println("Type Name");
